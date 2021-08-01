@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodApp Assignment</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><span>Food</span>App</a>
+
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar" class="fas fa-bars"></label>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">Services</a>
+        <a href="#features">order</a>
+        <a href="#features">menu</a>
+        <a href="#contact">about</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img1.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img2.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img3.jpg" style="width: 100%" />
+        </div>
+      </div>
+
+      <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+      </script>
+
+      <div class="content">
+        <h3>best food app <span>hands down</span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          suscipit porro nam libero natus error consequatur sed repudiandae eos
+          quo?
+        </p>
+        <a href="#" class="btn">download now</a>
+      </div>
+
+      <div class="image">
+        <img src="images/home-img.png" alt="" />
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h1 class="heading">Food Showcase</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="salmon.jpg" alt="" />
+          <h3>Salmon</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            minus recusandae autem, repellendus fugit quaerat provident
+            voluptatum non officiis ratione.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="burger.jpg" alt="" />
+          <h3>Burger</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            minus recusandae autem, repellendus fugit quaerat provident
+            voluptatum non officiis ratione.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="pizza.jpg" alt="" />
+          <h3>Pizza</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            minus recusandae autem, repellendus fugit quaerat provident
+            voluptatum non officiis ratione.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="pasta.jpg" alt="" />
+          <h3>Pasta</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            minus recusandae autem, repellendus fugit quaerat provident
+            voluptatum non officiis ratione.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="crepe.jpg" alt="" />
+          <h3>Crepe</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            minus recusandae autem, repellendus fugit quaerat provident
+            voluptatum non officiis ratione.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="wing.jpg" alt="" />
+          <h3>Wing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            minus recusandae autem, repellendus fugit quaerat provident
+            voluptatum non officiis ratione.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="image">
+        <img src="undraw_contact_us_15o2.svg" alt="" />
+      </div>
+
+      <form action="">
+        <h1 class="heading">contact us</h1>
+
+        <div class="inputBox">
+          <input type="text" required />
+          <label>name</label>
+        </div>
+
+        <div class="inputBox">
+          <input type="email" required />
+          <label>email</label>
+        </div>
+
+        <div class="inputBox">
+          <input type="number" required />
+          <label>phone</label>
+        </div>
+
+        <div class="inputBox">
+          <textarea required name="" id="" cols="30" rows="10"></textarea>
+          <label>message</label>
+        </div>
+
+        <input type="submit" class="btn" value="send message" />
+      </form>
+    </section>
+  </body>
+</html>
